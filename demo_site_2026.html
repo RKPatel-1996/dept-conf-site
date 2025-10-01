@@ -1,0 +1,743 @@
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advances in Biological Sciences | International Conference 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style
+    dangerouslySetInnerHTML={{
+      __html:
+        "\n      body {\n        font-family: \"Inter\", sans-serif;\n      }\n      h1,\n      h2,\n      h3,\n      h4,\n      .font-lora {\n        font-family: \"Lora\", serif;\n      }\n      .theme-bg-primary {\n        background-color: #4a044e;\n      } /* Deep Purple */\n      .theme-text-primary {\n        color: #4a044e;\n      }\n      .theme-bg-secondary {\n        background-color: #c1121f;\n      } /* Burgundy/Red from logo */\n      .theme-text-secondary {\n        color: #c1121f;\n      }\n      .theme-bg-accent {\n        background-color: #f7b538;\n      } /* Gold/Yellow accent */\n      .theme-text-accent {\n        color: #f7b538;\n      }\n      .bg-pattern {\n        background-image: url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");\n      }\n    "
+    }}
+  />
+  {/* Header & Navigation */}
+  <header
+    id="header"
+    className="theme-bg-primary text-white shadow-lg sticky top-0 z-50 transition-all duration-300"
+  >
+    <div className="container mx-auto px-6 py-3">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <img
+            src="https://gujaratuniversity.ac.in/images/logo-1.png"
+            alt="Gujarat University Logo"
+            className="h-10 w-10 mr-3 bg-white p-1 rounded-full"
+          />
+          <div>
+            <h1 className="text-xl md:text-2xl font-bold font-lora">
+              Advances in Biological sciences
+            </h1>
+            <p className="text-xs md:text-sm text-gray-300">
+              International Conference 2026
+            </p>
+          </div>
+        </div>
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center space-x-6">
+          <a href="#home" className="hover:text-theme-accent transition">
+            Home
+          </a>
+          <a href="#about" className="hover:text-theme-accent transition">
+            About
+          </a>
+          <a href="#themes" className="hover:text-theme-accent transition">
+            Themes
+          </a>
+          <a href="#schedule" className="hover:text-theme-accent transition">
+            Schedule
+          </a>
+          <a href="#speakers" className="hover:text-theme-accent transition">
+            Speakers
+          </a>
+          <a href="#abstracts" className="hover:text-theme-accent transition">
+            Abstracts
+          </a>
+          <a
+            href="#registration"
+            className="hover:text-theme-accent transition"
+          >
+            Register
+          </a>
+        </nav>
+        {/* Mobile Nav Button */}
+        <button id="mobile-menu-btn" className="lg:hidden focus:outline-none">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    {/* Mobile Menu */}
+    <div id="mobile-menu" className="hidden lg:hidden bg-white text-gray-800">
+      <a href="#home" className="block py-2 px-6 text-sm hover:bg-slate-100">
+        Home
+      </a>
+      <a href="#about" className="block py-2 px-6 text-sm hover:bg-slate-100">
+        About
+      </a>
+      <a href="#themes" className="block py-2 px-6 text-sm hover:bg-slate-100">
+        Themes
+      </a>
+      <a
+        href="#schedule"
+        className="block py-2 px-6 text-sm hover:bg-slate-100"
+      >
+        Schedule
+      </a>
+      <a
+        href="#speakers"
+        className="block py-2 px-6 text-sm hover:bg-slate-100"
+      >
+        Speakers
+      </a>
+      <a
+        href="#abstracts"
+        className="block py-2 px-6 text-sm hover:bg-slate-100"
+      >
+        Abstracts
+      </a>
+      <a
+        href="#registration"
+        className="block py-2 px-6 text-sm hover:bg-slate-100"
+      >
+        Register
+      </a>
+    </div>
+  </header>
+  <main>
+    {/* Hero Section */}
+    <section id="home" className="relative text-white bg-pattern">
+      <div className="absolute inset-0 theme-bg-primary opacity-90" />
+      <div className="relative container mx-auto px-6 py-24 md:py-32 text-center">
+        <p className="text-lg md:text-xl font-medium text-theme-accent mb-2">
+          International conference on
+        </p>
+        <h2 className="text-4xl md:text-6xl font-bold font-lora leading-tight">
+          "Advances in Biological sciences
+        </h2>
+        <h3 className="text-2xl md:text-4xl font-lora mt-2">
+          for sustainable development"
+        </h3>
+        <p className="mt-6 text-xl md:text-2xl font-semibold">
+          Mon-Tue 22-23 Dec, 2026
+        </p>
+        <p className="mt-2 text-lg text-gray-300">
+          Gujarat University, Ahmedabad
+        </p>
+        <a
+          href="#registration"
+          className="mt-8 inline-block theme-bg-secondary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105"
+        >
+          Register Now
+        </a>
+      </div>
+    </section>
+    {/* About Section */}
+    <section id="about" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center theme-text-primary mb-12">
+          About The Conference
+        </h2>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-slate-50 p-8 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold theme-text-secondary mb-4">
+              Our Vision
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              This conference aims to bring together leading academic
+              scientists, researchers, and research scholars to exchange and
+              share their experiences and research results on all aspects of
+              biological sciences. It also provides a premier interdisciplinary
+              platform for researchers, practitioners, and educators to present
+              and discuss the most recent innovations, trends, and concerns as
+              well as practical challenges encountered and solutions adopted in
+              the fields of biological sciences for sustainable development.
+            </p>
+          </div>
+          <div className="bg-slate-50 p-8 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold theme-text-secondary mb-4">
+              The Organizing Department
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              The Department of Microbiology and Biotechnology, established in
+              1975 at Gujarat University, is a dynamic organization offering
+              M.Sc. and Ph.D. programs. Our faculty specializes in diverse
+              fields such as Plant and Soil Microbiology, Environmental
+              Microbiology, and Bioremediation. Recognized with the DST-FIST
+              Grant for research excellence, we are committed to shaping future
+              scientists by fostering interdisciplinary connections and strong
+              industry partnerships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* Core Themes Section */}
+    <section id="themes" className="py-20 bg-slate-100 bg-pattern">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center theme-text-primary mb-12">
+          Core Themes
+        </h2>
+        <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+          We invite researchers, academicians, and industry professionals to
+          submit abstracts on the following themes. Share your work and
+          contribute to the dialogue on a sustainable future.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Theme Cards */}
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <h3 className="text-xl font-bold theme-text-secondary mb-3">
+              Biotechnology for zero hunger
+            </h3>
+            <p className="text-gray-600">
+              Innovations in agricultural biotech to ensure food security.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <h3 className="text-xl font-bold theme-text-secondary mb-3">
+              Bioinnovations for healthcare and wellness
+            </h3>
+            <p className="text-gray-600">
+              Advances in medical and pharmaceutical biotechnology.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <h3 className="text-xl font-bold theme-text-secondary mb-3">
+              Biosolutions for environmental sustainability
+            </h3>
+            <p className="text-gray-600">
+              Using biology to tackle environmental challenges.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <h3 className="text-xl font-bold theme-text-secondary mb-3">
+              Biomanufacturing and green industrial process
+            </h3>
+            <p className="text-gray-600">
+              Sustainable production through biological systems.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <h3 className="text-xl font-bold theme-text-secondary mb-3">
+              Ethical AI in biological science
+            </h3>
+            <p className="text-gray-600">
+              Exploring the intersection of artificial intelligence and ethics
+              in biology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* Schedule Section */}
+    <section id="schedule" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center theme-text-primary mb-12">
+          Conference Schedule
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          {/* Tabs */}
+          <div className="mb-4 flex justify-center border-b border-gray-200">
+            <button
+              className="schedule-tab active-tab py-2 px-6 font-semibold text-lg theme-text-secondary border-b-2 border-red-600"
+              data-target="day1"
+            >
+              Day 1: Dec 22, 2026
+            </button>
+            <button
+              className="schedule-tab py-2 px-6 font-semibold text-lg text-gray-500"
+              data-target="day2"
+            >
+              Day 2: Dec 23, 2026
+            </button>
+          </div>
+          {/* Schedule Content */}
+          <div id="schedule-content">
+            <div id="day1" className="schedule-pane">
+              {/* Day 1 Schedule Items (Placeholder Content) */}
+              <div className="space-y-4">
+                <div className="p-4 bg-slate-50 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    09:30 - 10:30 AM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Registration and Breakfast
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Collect your kits and enjoy a complimentary breakfast.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-100 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    10:30 - 11:45 AM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Inauguration &amp; Keynote Address
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Welcome remarks and opening keynote session.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    12:15 - 01:00 PM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">Plenary Session 1</h4>
+                    <p className="text-sm text-gray-600">
+                      Talk by a distinguished resource person.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-100 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    02:15 - 03:30 PM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Oral Presentations - Session I
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Parallel sessions for research scholars.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    04:00 - 05:30 PM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Poster Presentations - Session I
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Faculty and research scholars presenting their work.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="day2" className="schedule-pane hidden">
+              {/* Day 2 Schedule Items (Placeholder Content)*/}
+              <div className="space-y-4">
+                <div className="p-4 bg-slate-50 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    10:00 - 10:45 AM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">Plenary Session 2</h4>
+                    <p className="text-sm text-gray-600">
+                      Talk by a distinguished resource person.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-100 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    10:45 - 11:30 AM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">Plenary Session 3</h4>
+                    <p className="text-sm text-gray-600">
+                      Talk by a distinguished resource person.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    12:00 - 01:30 PM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Oral Presentations - Session II
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Parallel sessions for research scholars.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-100 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    02:30 - 04:00 PM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Poster Presentations - Session II
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Presentations by Post Graduate students.
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-lg flex items-start space-x-4">
+                  <span className="font-bold theme-text-primary w-32">
+                    04:00 - 04:30 PM
+                  </span>
+                  <div className="flex-1">
+                    <h4 className="font-semibold">
+                      Valedictory Function &amp; Prize Distribution
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Concluding remarks and awards ceremony.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* Speakers Section */}
+    <section id="speakers" className="py-20 bg-slate-100 bg-pattern">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center theme-text-primary mb-12">
+          Resource Persons
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {/* Speaker Cards */}
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=KU"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              K.S. Ulhas Cortes
+            </h3>
+            <p className="text-gray-600">TIFR-Hyderabad</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=PA"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Dr. P.K. Arora
+            </h3>
+            <p className="text-gray-600">DRDO</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=RS"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Dr. Rachna Shukla
+            </h3>
+            <p className="text-gray-600">USA</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=SC"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Dr. Sonali Chaturvedi
+            </h3>
+            <p className="text-gray-600">USA</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=AD"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">AIIMS</h3>
+            <p className="text-gray-600">Delhi</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=MT"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Dr. Mehul Thukor
+            </h3>
+            <p className="text-gray-600">Canada</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=SK"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Prof. Sunil Khare
+            </h3>
+            <p className="text-gray-600">IISER-Kolkata, IIT-Delhi</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=IB"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">IISc</h3>
+            <p className="text-gray-600">Bangalore</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=IT"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">IIT</h3>
+            <p className="text-gray-600">India</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=N"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Prof. Natarajan
+            </h3>
+            <p className="text-gray-600">Dean - JNU - New Delhi</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=RC"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Prof. Rupesh Chaturvedi
+            </h3>
+            <p className="text-gray-600">J.U.O - Biotech</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg text-center p-6">
+            <img
+              src="https://placehold.co/150x150/4A044E/FFFFFF?text=AS"
+              alt="Speaker"
+              className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200"
+            />
+            <h3 className="text-xl font-bold theme-text-secondary">
+              Dr. Anand Singh
+            </h3>
+            <p className="text-gray-600">Microbiology. IISER-Tirupati</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* Abstracts Section */}
+    <section id="abstracts" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center theme-text-primary mb-12">
+          Browse Abstracts
+        </h2>
+        <div id="abstract-accordion" className="space-y-4 max-w-5xl mx-auto">
+          {/* Accordion Item for Theme 1 */}
+          <div className="border rounded-lg">
+            <button className="accordion-header w-full flex justify-between items-center p-4 bg-slate-100 hover:bg-slate-200 transition">
+              <h3 className="text-lg font-semibold theme-text-primary">
+                Theme 1: Biotechnology for zero hunger
+              </h3>
+              <svg
+                className="accordion-icon w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div className="accordion-content hidden p-4 bg-white space-y-4">
+              {/* Abstract Card */}
+              <div className="border-l-4 border-red-500 pl-4 py-2">
+                <h4 className="font-bold text-red-800">
+                  (Sample) T1001: Enhancing Crop Yields using CRISPR
+                </h4>
+                <p className="text-sm text-gray-500 italic">
+                  Author One, Author Two
+                </p>
+                <p className="mt-2 text-gray-700">
+                  This is a sample abstract text. Abstract submissions will be
+                  listed here under their respective themes. More details on
+                  submission guidelines will be available soon.
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Accordion Item for Theme 2 */}
+          <div className="border rounded-lg">
+            <button className="accordion-header w-full flex justify-between items-center p-4 bg-slate-100 hover:bg-slate-200 transition">
+              <h3 className="text-lg font-semibold theme-text-primary">
+                Theme 2: Bioinnovations for healthcare and wellness
+              </h3>
+              <svg
+                className="accordion-icon w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div className="accordion-content hidden p-4 bg-white space-y-4">
+              {/* Abstract Card */}
+              <div className="border-l-4 border-red-500 pl-4 py-2">
+                <h4 className="font-bold text-red-800">
+                  (Sample) T2001: Novel Drug Delivery Systems
+                </h4>
+                <p className="text-sm text-gray-500 italic">
+                  Author Three, Author Four
+                </p>
+                <p className="mt-2 text-gray-700">
+                  This is a sample abstract text. Abstract submissions will be
+                  listed here under their respective themes. More details on
+                  submission guidelines will be available soon.
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Add more accordion items for other themes similarly */}
+        </div>
+      </div>
+    </section>
+    {/* Registration Section */}
+    <section
+      id="registration"
+      className="py-20 theme-bg-primary bg-pattern text-white"
+    >
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold mb-4">Register for the Conference</h2>
+        <p className="text-lg mb-10 text-gray-300">
+          Join leading experts and researchers. Secure your spot today!
+        </p>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Registration Card */}
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
+            <h3 className="text-2xl font-bold text-theme-accent mb-2">
+              Student
+            </h3>
+            <p className="text-4xl font-bold mb-4">₹1500</p>
+            <ul className="text-gray-300 space-y-2 mb-6">
+              <li>Access to all sessions</li>
+              <li>Conference Kit</li>
+              <li>Lunch &amp; Refreshments</li>
+            </ul>
+            <button className="w-full theme-bg-secondary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition">
+              Register as Student
+            </button>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border-2 border-theme-accent transform scale-105 shadow-2xl">
+            <h3 className="text-2xl font-bold text-theme-accent mb-2">
+              Academic/Faculty
+            </h3>
+            <p className="text-4xl font-bold mb-4">₹2500</p>
+            <ul className="text-gray-300 space-y-2 mb-6">
+              <li>Access to all sessions</li>
+              <li>Conference Kit</li>
+              <li>Networking Dinner</li>
+            </ul>
+            <button className="w-full theme-bg-accent hover:bg-yellow-600 text-purple-900 font-bold py-3 px-6 rounded-lg transition">
+              Register as Academic
+            </button>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
+            <h3 className="text-2xl font-bold text-theme-accent mb-2">
+              Industry Professional
+            </h3>
+            <p className="text-4xl font-bold mb-4">₹4000</p>
+            <ul className="text-gray-300 space-y-2 mb-6">
+              <li>All Academic Benefits</li>
+              <li>Industry Round Table</li>
+              <li>Certificate of Participation</li>
+            </ul>
+            <button className="w-full theme-bg-secondary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition">
+              Register as Professional
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* Venue & Contact Section */}
+    <section id="contact" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center theme-text-primary mb-12">
+          Venue &amp; Contact
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="text-2xl font-bold theme-text-secondary mb-4">
+              Location
+            </h3>
+            <p className="text-lg text-gray-700 mb-2">
+              Central Atrium, Department of Microbiology &amp; Biotechnology
+            </p>
+            <p className="text-gray-600">
+              University School of Sciences, Gujarat University,
+              Ahmedabad-380009, Gujarat, India.
+            </p>
+            <h3 className="text-2xl font-bold theme-text-secondary mt-8 mb-4">
+              Contact Us
+            </h3>
+            <p className="text-gray-600">
+              <strong>Email:</strong> conference.bio@gujaratuniversity.ac.in
+            </p>
+            <p className="text-gray-600">
+              <strong>Phone:</strong> +91 79 2630 2578
+            </p>
+          </div>
+          <div className="h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.662580741208!2d72.54784981540306!3d23.03608798494639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e75686ba83%3A0x1534b3f4653f3e18!2sGujarat%20University!5e0!3m2!1sen!2sin!4v1663155353112!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  {/* Footer */}
+  <footer className="theme-bg-primary text-white py-8">
+    <div className="container mx-auto px-6 text-center">
+      <p>
+        © 2026 Department of Microbiology and Biotechnology, Gujarat University.
+        All Rights Reserved.
+      </p>
+      <p className="text-sm text-gray-400 mt-2">
+        Website for the International Conference on Advances in Biological
+        Sciences.
+      </p>
+    </div>
+  </footer>
+</>

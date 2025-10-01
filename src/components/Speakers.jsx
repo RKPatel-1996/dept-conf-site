@@ -1,0 +1,35 @@
+import { speakersData } from "../data/speakers";
+
+const Speakers = () => {
+  return (
+    <section id="speakers" className="py-20 bg-slate-100 dark:bg-dark-surface">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center text-primary dark:text-white mb-12 font-lora">
+          Resource Persons
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {speakersData.map((speaker) => (
+            <div
+              key={speaker.id}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <img
+                src={speaker.imageUrl}
+                alt={`Photo of ${speaker.name}`}
+                className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-slate-200 dark:border-gray-700"
+              />
+              <h3 className="text-xl font-bold text-secondary">
+                {speaker.name}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                {speaker.affiliation}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Speakers;
