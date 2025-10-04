@@ -1,14 +1,39 @@
 import { useState } from "react";
-import { abstractsData } from "../data/abstracts";
+import { useData } from "../context/DataContext"; // 👈 Import useData
 
 const Abstracts = () => {
-  // State to track the ID of the open accordion item. null means all are closed.
   const [openAccordion, setOpenAccordion] = useState(null);
+  const { data, loading, error } = useData(); // 👈 Get data from context
 
   const handleToggle = (id) => {
-    // If the clicked accordion is already open, close it. Otherwise, open the new one.
     setOpenAccordion(openAccordion === id ? null : id);
   };
+
+  if (loading) {
+    return (
+      <section id="abstracts" className="py-20 bg-white dark:bg-dark-bg">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-primary dark:text-white mb-12 font-lora">
+            Browse Abstracts
+          </h2>
+          <p>Loading abstracts...</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="abstracts" className="py-20 bg-red-100 dark:bg-red-900">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-red-700 dark:text-red-200 mb-12 font-lora">
+            Error
+          </h2>
+          <p>Could not load abstracts.</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="abstracts" className="py-20 bg-white dark:bg-dark-bg">
@@ -17,12 +42,12 @@ const Abstracts = () => {
           Browse Abstracts
         </h2>
         <div className="space-y-4 max-w-5xl mx-auto">
-          {abstractsData.map((theme) => (
+          {/* 👇 Use data.abstracts from the context */}
+          {data.abstracts.map((theme) => (
             <div
               key={theme.themeId}
               className="border dark:border-gray-700 rounded-lg overflow-hidden"
             >
-              {/* Accordion Header */}
               <button
                 onClick={() => handleToggle(theme.themeId)}
                 className="w-full flex justify-between items-center p-4 bg-slate-100 hover:bg-slate-200 dark:bg-dark-surface dark:hover:bg-gray-800 transition"
@@ -46,8 +71,6 @@ const Abstracts = () => {
                   />
                 </svg>
               </button>
-
-              {/* Accordion Content */}
               <div
                 className={`p-4 bg-white dark:bg-gray-800 space-y-4 ${
                   openAccordion === theme.themeId ? "block" : "hidden"

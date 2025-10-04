@@ -1,6 +1,29 @@
-import { registrationData } from "../data/registration";
+import { useData } from "../context/DataContext"; // 👈 Import useData
 
 const Registration = () => {
+  const { data, loading, error } = useData(); // 👈 Get data from context
+
+  if (loading || error) {
+    // Show a simplified placeholder during load or on error
+    return (
+      <section
+        id="registration"
+        className="py-20 bg-primary dark:bg-dark-bg bg-pattern text-white"
+      >
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4 font-lora">
+            Register for the Conference
+          </h2>
+          <p className="text-lg mb-10 text-gray-300">
+            {loading
+              ? "Loading registration options..."
+              : "Could not load options."}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       id="registration"
@@ -14,7 +37,8 @@ const Registration = () => {
           Join leading experts and researchers. Secure your spot today!
         </p>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {registrationData.map((tier) => (
+          {/* 👇 Use data.registration from the context */}
+          {data.registration.map((tier) => (
             <div
               key={tier.id}
               className={`bg-white/10 backdrop-blur-sm p-8 rounded-lg border transition-transform duration-300 ${

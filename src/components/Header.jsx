@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { navLinks } from "../data/navigation";
+import { useData } from "../context/DataContext"; // 👈 Step 1: Import the useData hook
 import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { data } = useData(); // 👈 Step 2: Get the data from the context
+
+  // Safely get navLinks or an empty array if data is still loading
+  const navLinks = data ? data.navigation : [];
 
   return (
     <header className="bg-primary text-white shadow-lg sticky top-0 z-50">
@@ -12,7 +16,7 @@ const Header = () => {
           {/* Logo and Title */}
           <div className="flex items-center">
             <img
-              src="https://gujaratuniversity.ac.in/images/logo-1.png"
+              src="/photos/gu_logo.png"
               alt="Gujarat University Logo"
               className="h-10 w-10 mr-3 bg-white p-1 rounded-full"
             />
@@ -29,6 +33,7 @@ const Header = () => {
           {/* Desktop Navigation & Theme Switcher */}
           <div className="hidden lg:flex items-center space-x-6">
             <nav className="flex items-center space-x-6">
+              {/* 👇 Step 3: Use the navLinks from our context */}
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -39,12 +44,12 @@ const Header = () => {
                 </a>
               ))}
             </nav>
-            <ThemeSwitcher /> {/* Add the switcher here */}
+            <ThemeSwitcher />
           </div>
 
           {/* Mobile Menu Button (Hamburger) */}
           <div className="lg:hidden flex items-center space-x-4">
-            <ThemeSwitcher /> {/* Also add switcher for mobile view */}
+            <ThemeSwitcher />
             <button
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
               className="focus:outline-none"
@@ -75,6 +80,7 @@ const Header = () => {
           isMobileMenuOpen ? "block" : "hidden"
         } lg:hidden bg-white text-gray-800`}
       >
+        {/* 👇 Step 3 (repeated): Also use the context data here */}
         {navLinks.map((link) => (
           <a
             key={link.name}

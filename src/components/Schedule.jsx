@@ -1,9 +1,36 @@
-import { useState } from "react";
-import { scheduleData } from "../data/schedule";
+import { useState } from "react"; // 👈 Was missing
+import { useData } from "../context/DataContext";
 
 const Schedule = () => {
-  // useState holds the index of the active tab. We start with the first tab (index 0).
+  // 1. ADDED: useState to manage the active tab, starting with the first one (index 0).
   const [activeTab, setActiveTab] = useState(0);
+  const { data, loading, error } = useData();
+
+  if (loading) {
+    return (
+      <section id="schedule" className="py-20 bg-white dark:bg-dark-bg">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-primary dark:text-white mb-12 font-lora">
+            Conference Schedule
+          </h2>
+          <p>Loading content...</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="schedule" className="py-20 bg-red-100 dark:bg-red-900">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-red-700 dark:text-red-200 mb-12 font-lora">
+            Error
+          </h2>
+          <p>Could not load content.</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="schedule" className="py-20 bg-white dark:bg-dark-bg">
@@ -14,7 +41,8 @@ const Schedule = () => {
         <div className="max-w-4xl mx-auto">
           {/* Tab Buttons */}
           <div className="mb-4 flex justify-center border-b border-gray-200 dark:border-gray-700">
-            {scheduleData.map((day, index) => (
+            {/* 2. FIXED: Use data.schedule instead of scheduleData */}
+            {data.schedule.map((day, index) => (
               <button
                 key={day.day}
                 onClick={() => setActiveTab(index)}
@@ -31,7 +59,8 @@ const Schedule = () => {
 
           {/* Schedule Content */}
           <div>
-            {scheduleData.map((day, index) => (
+            {/* 2. FIXED: Also use data.schedule here */}
+            {data.schedule.map((day, index) => (
               <div
                 key={day.day}
                 className={activeTab === index ? "block" : "hidden"}
@@ -49,7 +78,7 @@ const Schedule = () => {
                       <span className="font-bold text-primary dark:text-accent w-32 shrink-0">
                         {event.time}
                       </span>
-                      <div className="flex-1">
+                      <div>
                         <h4 className="font-semibold text-gray-800 dark:text-white">
                           {event.title}
                         </h4>
